@@ -1,5 +1,6 @@
+import { objTag } from '../base/orgTag.js'
+
 const arrArg = ['Array', 'String', 'Object', 'Date', 'Number', 'RegExp', 'Null', 'Undefined', 'Function', 'Set', 'Map']
-const objTag = Object.prototype.toString
 const is = {}
 const len = arrArg.length
 for (let i = 0; i < len; i++) {

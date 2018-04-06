@@ -43,6 +43,10 @@ import * as Browser from './utils/browser.js'
 	if (process.env.NODE_ENV === 'development') {
 		console.log(__)
 	}
+	console.log(__.setObjEmpty({
+		name: 0,
+		age: '18'
+	}))
   /**
   * @param {返回}
   */

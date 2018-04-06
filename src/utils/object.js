@@ -24,3 +24,15 @@ export const filterObjectBy = (arrayObj, mark) => {
   }
   return result
 }
+/**
+* @param setObjEmpty 置空一个对象 并返回该对象
+*/
+export const setObjEmpty = (obj) => {
+  let res = {}
+  for (let i in obj) {
+    if (obj.hasOwnProperty(i)) {
+      res[i] = ''
+    }
+  }
+  return res
+}
