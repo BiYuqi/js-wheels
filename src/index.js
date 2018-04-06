@@ -1,6 +1,8 @@
 import is from './utils/is.js'
 import * as Ary from './utils/array.js'
 import * as Obj from './utils/object.js'
+import * as Browser from './utils/browser.js'
+
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
 	typeof define === 'function' && define.amd ? define(factory) :
@@ -30,14 +32,17 @@ import * as Obj from './utils/object.js'
   const allMethods = [
     is,
     Ary,
-    Obj
+    Obj,
+		Browser
   ]
 
   /**
   * @param {调用方法}
   */
   exportAllObj(...allMethods)
-
+	if (process.env.NODE_ENV === 'development') {
+		console.log(__)
+	}
   /**
   * @param {返回}
   */

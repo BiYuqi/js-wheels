@@ -8,9 +8,11 @@
 export const filterObjectBy = (arrayObj, mark) => {
   let result = []
   let flag = false
-  for (let i = 0; i < arrayObj.length; i++) {
+  const LEN = arrayObj.length
+  for (let i = 0; i < LEN; i++) {
     flag = false
-    for (let j = 0; j < result.length; j++) {
+    const LEN_RES = result.length
+    for (let j = 0; j < LEN_RES; j++) {
       if (arrayObj[i][mark] === result[j][mark]) {
         flag = true
         break

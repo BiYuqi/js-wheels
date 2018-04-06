@@ -1,6 +1,17 @@
 # 自制工具脚手架
 ```js
 // 还未发布到npm,初步计划一个小型函数库，后续会发布至npm,喜欢的就点个star吧,欢迎issues
+
+git clone https://github.com/BiYuqi/js-utils.git
+
+cd js-utils
+
+npm install
+
+// development
+npm run dev
+// production
+npm run build
 ```
 ## 支持AMD CMD
 ```js
@@ -24,11 +35,26 @@ const jt = require('./dist/js-utils.js')
 ```
 ## Object
 ```js
+  /**
+  * @param arrayObj 数组包裹的对象
+  * @param mark 对象的key
+  */
   jt.filterObjectBy([{a:1},{a:1},{a:3},{a:3},{a:4}], 'a')
   // [{a:1},{a:3},{a:4}] 根据对象某一个属性进行去重
 ```
 ## Browser
-
+```js
+  jt.inBrowser // boolean
+  jt.inWeex // boolean
+  jt.weexPlatform // boolean
+  jt.UA // String
+  jt.isIE // boolean
+  jt.isIE9 // boolean
+  jt.isEdge // boolean
+  jt.isAndroid // boolean
+  jt.isIOS // boolean
+  jt.isChrome // boolean
+```
 ## Is
 ```js
   jt.isArray([]) // true
@@ -41,4 +67,5 @@ const jt = require('./dist/js-utils.js')
   jt.isDate(new Date()) // true
   jt.isFunction(null) // false
   jt.isRegExp(/\d+/) // true
+  jt.isNaN(0/0) // true
 ```

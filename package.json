@@ -15,9 +15,9 @@
   "author": "Biyuqi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BiYuqi/is/issues"
+    "url": "https://github.com/BiYuqi/js-utils/issues"
   },
-  "homepage": "https://github.com/BiYuqi/is#readme",
+  "homepage": "https://github.com/BiYuqi/js-utils/blob/master/README.md",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
