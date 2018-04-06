@@ -10,10 +10,10 @@ import * as Browser from './utils/browser.js'
 }(this || (typeof window !== 'undefined' ? window : global), (function () { 'use strict';
   /**
   * @param __ 组合对象的接受对象 默认{}
-  * @param exportAllObj 遍历所有导入的属性方法集合,注入emptyBox
+  * @param exportAllObj 遍历所有导入的属性方法集合,注入__
   */
   const __ = {}
-  const exportAllObj = (...params) => {
+  const exportAllObj = (params) => {
     const lenRes = params.length
     for (let i = 0; i < lenRes; i++) {
       const source = params[i]
@@ -35,11 +35,10 @@ import * as Browser from './utils/browser.js'
     Obj,
 		Browser
   ]
-
   /**
   * @param {调用方法}
   */
-  exportAllObj(...allMethods)
+  exportAllObj(allMethods)
 	if (process.env.NODE_ENV === 'development') {
 		console.log(__)
 	}
