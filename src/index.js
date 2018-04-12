@@ -2,6 +2,7 @@ import is from './utils/is.js'
 import * as Ary from './utils/array.js'
 import * as Obj from './utils/object.js'
 import * as Browser from './utils/browser.js'
+import * as Timer from './utils/timer.js'
 
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
@@ -33,7 +34,8 @@ import * as Browser from './utils/browser.js'
     is,
     Ary,
     Obj,
-		Browser
+		Browser,
+		Timer
   ]
   /**
   * @param {调用方法}
