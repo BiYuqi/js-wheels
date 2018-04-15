@@ -39,5 +39,18 @@ export const differenceWith = (a, b) => {
     return [].concat(a.filter((item) => s.has(item)))
 }
 /**
-*
+* array flatten 数据扁平化
 */
+export const flattenArray = (source) => {
+  if (!IS.isArray(source)) {
+    throw new Error('source must be an array')
+  }
+  const res = []
+  ;(function flat(source) {
+    const len = source.length
+    for (let i = 0; i < len; i++) {
+      IS.isArray(source[i]) ? flat(source[i]) : res.push(source[i])
+    }
+  })(source)
+  return res
+}

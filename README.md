@@ -32,6 +32,7 @@ const jt = require('./dist/js-utils.js')
   jt.chunck([1, 2, 3, 4, 5], 2) // [[1, 2], [3, 4], [5]]
   jt.difference([1, 2, 3], [2, 3, 4]) // [1, 4] 差集
   jt.differenceWith([1, 2, 3], [2, 3, 4]) // [2, 3] 并集
+  jt.flattenArray([1, [2, 3]]) // [1, 2, 3] 扁平化数组
 ```
 ## Object
 ```js
