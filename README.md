@@ -70,3 +70,18 @@ const jt = require('./dist/js-utils.js')
   jt.isRegExp(/\d+/) // true
   jt.isNaN(0/0) // true
 ```
+## Other
+
+```js
+/**
+* 格式化请求参数
+* @param {{ query }} Object
+* {
+*   key: '123',
+*   name: 'byq',
+*   test: ''
+* }
+* key=123&name=byq
+*/
+jt.formatQuery(query)
+```

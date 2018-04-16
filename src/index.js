@@ -1,7 +1,8 @@
-import is from './utils/is.js'
-import * as Ary from './utils/array.js'
-import * as Obj from './utils/object.js'
-import * as Browser from './utils/browser.js'
+import is from './utils/is'
+import * as Ary from './utils/array'
+import * as Obj from './utils/object'
+import * as Browser from './utils/browser'
+import * as Ajax from './utils/ajax'
 
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
@@ -34,7 +35,8 @@ import * as Browser from './utils/browser.js'
 		is,
 		Ary,
 		Obj,
-		Browser
+		Browser,
+		Ajax
   ]
 
   /**

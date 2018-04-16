@@ -22,6 +22,9 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    extensions: ['.js']
+  },
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
