@@ -1,7 +1,7 @@
 {
-  "name": "is",
+  "name": "js-utils",
   "version": "1.0.0",
-  "description": "",
+  "description": "0.0.1",
   "main": "index.js",
   "scripts": {
     "watch": "webpack --watch",
@@ -13,7 +13,7 @@
     "url": "git+https://github.com/BiYuqi/js-utils.git"
   },
   "author": "Biyuqi",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/BiYuqi/js-utils/issues"
   },

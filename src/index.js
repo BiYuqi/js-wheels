@@ -2,7 +2,7 @@ import is from './utils/is'
 import * as Ary from './utils/array'
 import * as Obj from './utils/object'
 import * as Browser from './utils/browser'
-import * as Ajax from './utils/ajax'
+import * as Ajax from './utils/querySearch'
 
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
