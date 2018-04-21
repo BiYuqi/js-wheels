@@ -7,7 +7,7 @@ const resolve = (dir) => {
 }
 module.exports = {
   entry: {
-    'js-wheel': './src/index.js'
+    'js-wheels': './src/index.js'
   },
   output: {
     path: path.join(__dirname, 'dist'),

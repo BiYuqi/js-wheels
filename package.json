@@ -1,8 +1,8 @@
 {
-  "name": "js-wheel",
+  "name": "js-wheels",
   "version": "2.0.0",
   "description": "0.0.1",
-  "main": "./dist/js-wheel.js",
+  "main": "dist/js-wheels.js",
   "scripts": {
     "watch": "webpack --watch",
     "dev": "webpack-dev-server --open --mode development --config webpack.dev.js",
