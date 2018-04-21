@@ -4,12 +4,7 @@ import * as Obj from './utils/object'
 import * as Browser from './utils/browser'
 import * as Ajax from './utils/querySearch'
 
-(function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-	typeof define === 'function' && define.amd ? define(factory) :
-	(global._js = factory());
-
-}(this || (typeof window !== 'undefined' ? window : global), (function () {
+;(function(global){
 	'use strict';
   /**
   * @param __ 组合对象的接受对象 默认{}
@@ -51,6 +46,9 @@ import * as Ajax from './utils/querySearch'
   /**
   * @param {返回}
   */
-
-  return __
-} )))
+	if (typeof module !== 'undefined') {
+		module.exports = __
+	} else {
+		global.js_weels = __
+	}
+})(this)
