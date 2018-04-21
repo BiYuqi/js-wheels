@@ -1,7 +1,5 @@
 # 自制工具脚手架
 ```js
-// 已经发布到npm,喜欢的就点个star吧,欢迎issues
-npm i js-wheel -S
 ```
 ## 支持AMD CMD
 ```js
