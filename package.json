@@ -1,6 +1,6 @@
 {
   "name": "js-wheels",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "0.0.1",
   "main": "dist/js-wheels.js",
   "scripts": {
