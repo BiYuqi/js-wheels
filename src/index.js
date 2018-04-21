@@ -7,8 +7,9 @@ import * as Ajax from './utils/querySearch'
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
 	typeof define === 'function' && define.amd ? define(factory) :
-	(global.jt = factory())
-}(this || (typeof window !== 'undefined' ? window : global), (function () {
+	(global._js = factory());
+
+}(this || (typeof window !== 'undefined' ? window : global), (function () { 'use strict';
 	'use strict'
   /**
   * @param __ 组合对象的接受对象 默认{}
@@ -44,7 +45,7 @@ import * as Ajax from './utils/querySearch'
   */
   exportAllObj(allMethods)
 	if (process.env.NODE_ENV === 'development') {
-		console.log(__)
+		// console.log(__)
 	}
 
   /**

@@ -1,17 +1,7 @@
 # 自制工具脚手架
 ```js
-// 还未发布到npm,初步计划一个小型函数库，后续会发布至npm,喜欢的就点个star吧,欢迎issues
-
-git clone https://github.com/BiYuqi/js-utils.git
-
-cd js-utils
-
-npm install
-
-// development
-npm run dev
-// production
-npm run build
+// 已经发布到npm,喜欢的就点个star吧,欢迎issues
+npm i js-wheel -S
 ```
 ## 支持AMD CMD
 ```js
