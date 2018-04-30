@@ -1,12 +1,46 @@
-import __ from './merge'
-;(function(win){
-	'use strict';
-	if (process.env.NODE_ENV === 'development') {
-		// console.log(win)
-	}
-	if (typeof exports == "object") {
-		module.exports = __
-	} else {
-		win.js_weels = __
-	}
-})(this || (typeof window !== 'undefined' ? window : global));
+import is from './utils/is'
+import * as Ary from './utils/array'
+import * as Obj from './utils/object'
+import * as Browser from './utils/browser'
+import * as Ajax from './utils/querySearch'
+
+/**
+* @param __ 组合对象的接受对象 默认{}
+* @param exportAllObj 遍历所有导入的属性方法集合,注入__
+*/
+const __ = {}
+
+/**
+* @param allMethods 所有的属性集合
+*/
+const allMethods = [
+	is,
+	Ary,
+	Obj,
+	Browser,
+	Ajax
+]
+const exportAllObj = (params) => {
+  const lenRes = params.length
+  for (let i = 0; i < lenRes; i++) {
+    const source = params[i]
+    const sourceName = Object.keys(source)
+    const lenName = sourceName.length
+    for (let j = 0; j < lenName; j++) {
+      const names = sourceName[j]
+      __[names] = source[names]
+    }
+  }
+}
+/**
+* @param {调用方法}
+*/
+exportAllObj(allMethods)
+if (process.env.NODE_ENV === 'development') {
+	console.log(__)
+}
+
+/**
+* @param {返回}
+*/
+export default __
