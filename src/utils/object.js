@@ -5,7 +5,7 @@
 * filterObjectBy([{a:1},{a:1},{a:3},{a:3},{a:4}], 'a')
 * [{a:1},{a:3},{a:4}]
 */
-export const filterObjectBy = (arrayObj, mark) => {
+const filterObjectBy = (arrayObj, mark) => {
   let result = []
   let flag = false
   const LEN = arrayObj.length
@@ -24,15 +24,7 @@ export const filterObjectBy = (arrayObj, mark) => {
   }
   return result
 }
-/**
-* @param setObjEmpty 置空一个对象 并返回该对象
-*/
-export const setObjEmpty = (obj) => {
-  let res = {}
-  for (let i in obj) {
-    if (obj.hasOwnProperty(i)) {
-      res[i] = ''
-    }
-  }
-  return res
+
+module.exports = {
+  filterObjectBy
 }

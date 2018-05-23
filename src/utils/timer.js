@@ -4,6 +4,10 @@
 * @param {key} 返回类型 h 时分秒 m 返回分钟 s 返回秒 默认h
 */
 
-export const differTime = (startTime, lastTime = new Date(), key = 'h') => {
-  
+const differTime = (startTime, lastTime = new Date(), key = 'h') => {
+
+}
+
+module.exports = {
+  differTime
 }

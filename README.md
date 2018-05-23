@@ -3,6 +3,9 @@
 ```
 ## 支持AMD CMD
 ```js
+npm i js-wheels -S
+```
+```js
 // webpack es6
 import jt from './dist/js-utils.js'
 const jt = require('./dist/js-utils.js')

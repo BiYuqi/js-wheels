@@ -12,4 +12,6 @@ is['isNaN'] = (v) => {
   return v !== v
 }
 
-export default is
+module.exports = {
+  ...is
+}
