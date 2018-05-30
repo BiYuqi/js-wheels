@@ -5,7 +5,7 @@
 * filterObjectBy([{a:1},{a:1},{a:3},{a:3},{a:4}], 'a')
 * [{a:1},{a:3},{a:4}]
 */
-const filterObjectBy = (arrayObj, mark) => {
+export const filterObjectBy = (arrayObj, mark) => {
   let result = []
   let flag = false
   const LEN = arrayObj.length
@@ -23,8 +23,4 @@ const filterObjectBy = (arrayObj, mark) => {
     }
   }
   return result
-}
-
-module.exports = {
-  filterObjectBy
 }

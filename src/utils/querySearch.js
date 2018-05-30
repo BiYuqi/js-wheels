@@ -9,7 +9,7 @@ const IS = require('./is.js')
 * }
 * key=123&name=byq
 */
-const formatQuery = (query) => {
+export const formatQuery = (query) => {
   if (!IS.isObject(query)) {
     throw new Error('query must be an Object')
   }
@@ -25,8 +25,4 @@ const formatQuery = (query) => {
     }
   }
   return res.join('').replace(/&$/, '')
-}
-
-module.exports = {
-  formatQuery
 }

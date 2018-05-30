@@ -3,7 +3,7 @@ const IS = require('./is.js')
 * chunck
 * splice array by conditions
 */
-const chunck = (arr, size) => {
+export const chunck = (arr, size) => {
   if (!IS.isArray(arr)) {
     throw 'The source must be an Array'
     return
@@ -26,7 +26,7 @@ const chunck = (arr, size) => {
 /**
 * difference 差集
 */
-const difference = (a, b) => {
+export const difference = (a, b) => {
     const s = new Set(b)
     const q = new Set(a)
     return [].concat(a.filter((item) => !s.has(item))).concat(b.filter((item) => !q.has(item)))
@@ -34,14 +34,14 @@ const difference = (a, b) => {
 /**
 * difference 交集
 */
-const differenceWith = (a, b) => {
+export const differenceWith = (a, b) => {
     const s = new Set(b)
     return [].concat(a.filter((item) => s.has(item)))
 }
 /**
 * array flatten 数据扁平化
 */
-const flattenArray = (source) => {
+export const flattenArray = (source) => {
   if (!IS.isArray(source)) {
     throw new Error('source must be an array')
   }
@@ -53,11 +53,4 @@ const flattenArray = (source) => {
     }
   })(source)
   return res
-}
-
-module.exports = {
-  chunck,
-  difference,
-  differenceWith,
-  flattenArray
 }

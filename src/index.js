@@ -1,8 +1,8 @@
-const IS = require('./utils/is')
-const Ary = require('./utils/array')
-const Obj = require('./utils/object')
-const Browser = require('./utils/browser')
-const Ajax = require('./utils/querySearch')
+import IS from './utils/is'
+import * as Ary from './utils/array'
+import * as Obj from './utils/object'
+import * as Browser from './utils/browser'
+import * as Search from './utils/querySearch'
 /**
 * @param __ 组合对象的接受对象 默认{}
 * @param exportAllObj 遍历所有导入的属性方法集合,注入__
@@ -16,7 +16,7 @@ const allMethods = {
 	...Ary,
 	...Obj,
 	...Browser,
-	...Ajax
+	...Search
 }
 /**
 * @param {调用方法}
@@ -26,17 +26,4 @@ if (process.env.NODE_ENV === 'development') {
 	// console.log(allMethods)
 }
 
-;(function (window, factory) {
-    if (typeof exports === 'object') {
-
-        module.exports = factory();
-    } else if (typeof define === 'function' && define.amd) {
-
-        define(factory);
-    } else {
-
-        window.jt = factory();
-    }
-})(this, function () {
-    return allMethods
-})
+module.exports = allMethods
