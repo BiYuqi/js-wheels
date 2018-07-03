@@ -5,13 +5,16 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const resolve = (dir) => {
   return path.join(__dirname, './', dir)
 }
+const production = process.env.NODE_ENV === 'production' || false
 module.exports = {
   entry: {
     'js-wheels': './src/index.js'
   },
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: '[name].js'
+    filename: production ? 'js-wheels.min.js' : 'js-wheels.js',
+    path: path.resolve(__dirname, 'dist'),
+    library: 'JsWheels',
+    libraryTarget: 'umd'
   },
   module: {
     rules: [

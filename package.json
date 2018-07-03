@@ -3,6 +3,7 @@
   "version": "2.0.3",
   "description": "0.0.1",
   "main": "dist/js-wheels.js",
+  "module": "dist/js-wheels.js",
   "scripts": {
     "watch": "webpack --watch",
     "dev": "webpack-dev-server --open --mode development --config webpack.dev.js",
@@ -22,6 +23,7 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-2": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",

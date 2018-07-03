@@ -1,4 +1,4 @@
-const IS = require('./is.js')
+import IS from './is.js'
 /**
 * chunck
 * splice array by conditions
