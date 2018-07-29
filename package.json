@@ -1,6 +1,6 @@
 {
   "name": "js-wheels",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "0.0.1",
   "main": "dist/js-wheels.js",
   "module": "dist/js-wheels.js",
