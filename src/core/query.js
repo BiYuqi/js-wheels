@@ -1,4 +1,5 @@
-const IS = require('./is.js')
+import IS from './is'
+
 /**
 * 格式化请求参数
 * @param {{ query }} Object
@@ -9,7 +10,7 @@ const IS = require('./is.js')
 * }
 * key=123&name=byq
 */
-export const formatQuery = (query) => {
+export function formatQuery (query) {
   if (!IS.isObject(query)) {
     throw new Error('query must be an Object')
   }

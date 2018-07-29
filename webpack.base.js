@@ -1,7 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
 const resolve = (dir) => {
   return path.join(__dirname, './', dir)
 }
@@ -29,7 +28,6 @@ module.exports = {
     extensions: ['.js']
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       template: 'index.html'
     })

@@ -1,4 +1,4 @@
-import { objTag } from '../base/orgTag.js'
+import { objTag } from '../base/base'
 
 const arrArg = ['Array', 'String', 'Object', 'Date', 'Number', 'RegExp', 'Null', 'Undefined', 'Function', 'Set', 'Map']
 const is = {}
