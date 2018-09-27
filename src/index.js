@@ -5,11 +5,18 @@ import * as Browser from './core/browser'
 import * as Search from './core/query'
 import * as Time from './core/times'
 import * as Str from './core/string'
+import proxy from './core/proxy'
 
-/**
-* @param allMethods 所有的属性集合
-*/
-const JSW = Object.assign({}, Ary, Obj, Browser, Search, IS, Time, Str)
+const JSW = Object.assign({},
+  Ary,
+  Obj,
+  Browser,
+  Search,
+  IS,
+  Time,
+  Str,
+  proxy
+)
 // if (process.env.NODE_ENV === 'development') {
 //   const list = [4, 5, 1, 2, 3]
 //   const res = JSW.filter(list, (index, item) => {
@@ -19,5 +26,4 @@ const JSW = Object.assign({}, Ary, Obj, Browser, Search, IS, Time, Str)
 //   console.log(list)
 //   console.log(res)
 // }
-
 module.exports = JSW

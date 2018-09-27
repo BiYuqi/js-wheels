@@ -83,6 +83,25 @@ JSW.chaining(data, 'name.age.go', '加载中...') // 27
 JSW.chaining(data, 'name.g.g.b.c', '加载中...') // 加载中...
 JSW.chaining(data, 'age', '暂无数据') // 38
 ```
+##### proxy
+```js
+/**
+ * @param {Object} obj
+ * @param {} path
+ * @example 拦截由于数据为空导致报错undefined 与chaining方法功能一样
+ * const test = {
+ *  a: 123,
+ *  b: 456,
+ *  list: {
+ *    dog: '旺旺'
+ *  }
+ * }
+ */
+// 最后调用放入无参数时默认值
+JSW.proxy(test).a() // 123
+JSW.proxy(test).a.list() // {dog: '旺旺'}
+JSW.proxy(test).a.list.cat('默认值') // 默认值
+```
 ##### arrToHash
 数组对象 => 转为双map结构
 ```js
