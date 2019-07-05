@@ -1,16 +1,18 @@
 const path = require('path')
-const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 const resolve = (dir) => {
-  return path.join(__dirname, './', dir)
+  return path.join(__dirname, dir)
 }
-const production = process.env.NODE_ENV === 'production' || false
+
+const prod = process.env.NODE_ENV === 'production' || false
+
 module.exports = {
   entry: {
-    'js-wheels': './src/index.js'
+    main: prod ? resolve('./src/index.js') : resolve('./src/index.dev.js')
   },
   output: {
-    filename: production ? 'js-wheels.min.js' : 'js-wheels.js',
+    filename: prod ? 'js-wheels.min.js' : 'js-wheels.js',
     path: path.resolve(__dirname, 'dist'),
     library: 'JsWheels',
     libraryTarget: 'umd'
@@ -19,13 +21,15 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        use: ['babel-loader'],
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        },
         exclude: /node_modules/
       }
     ]
-  },
-  resolve: {
-    extensions: ['.js']
   },
   plugins: [
     new HtmlWebpackPlugin({

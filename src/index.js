@@ -17,13 +17,5 @@ const JSW = Object.assign({},
   Str,
   proxy
 )
-// if (process.env.NODE_ENV === 'development') {
-//   const list = [4, 5, 1, 2, 3]
-//   const res = JSW.filter(list, (index, item) => {
-//     return item > 4
-//   })
-//   JSW.spliceByVal(list, 3)
-//   console.log(list)
-//   console.log(res)
-// }
-module.exports = JSW
+
+export default JSW
