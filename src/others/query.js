@@ -1,4 +1,4 @@
-import IS from './is'
+import Is from './is'
 
 /**
 * 格式化请求参数
@@ -11,7 +11,7 @@ import IS from './is'
 * key=123&name=byq
 */
 export function formatQuery (query) {
-  if (!IS.isObject(query)) {
+  if (!Is.isObject(query)) {
     throw new Error('query must be an Object')
   }
   let res = []

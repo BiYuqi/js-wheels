@@ -1,4 +1,4 @@
-import IS from './is'
+import Is from '../others/is'
 /**
 * filterObjectBy
 * 过滤同一个对象， 根据某一个属性进行过滤
@@ -30,7 +30,7 @@ export function filterObjectBy (arrayObj, mark) {
 * deep copy code
 */
 export function cloneDeep (o) {
-  const isObj = IS.isObject(o)
+  const isObj = Is.isObject(o)
   const oc = isObj ? {} : []
   for (let i in o) {
     if (o.hasOwnProperty(i)) {
@@ -66,7 +66,7 @@ export function cloneDeep (o) {
 * chaining(data, 'age', '暂无数据') // 38
 */
 export function chaining (target, props, def = '') {
-  if (!props || !IS.isString(props)) {
+  if (!props || !Is.isString(props)) {
     return target
   }
   const spl = props.split('.')

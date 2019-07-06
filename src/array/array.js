@@ -1,4 +1,4 @@
-import IS from './is'
+import IS from '../others/is'
 /**
 * chunck
 * splice array by conditions
