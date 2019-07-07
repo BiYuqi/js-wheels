@@ -1,4 +1,4 @@
-## 自制工具脚手架
+## 工具函数库
 > 欢迎提问题，欢迎start, 欢迎补充pr
 
 ### TODO
@@ -9,6 +9,7 @@
 ## 开始(Getting Started)
 
 ### 安装(Install)
+
 建议默认安装最新的，不要加版本号，新功能会不断的加入
 ```js
 npm i js-wheels -S
