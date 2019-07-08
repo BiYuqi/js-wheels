@@ -12,23 +12,23 @@ module.exports = merge(base, {
     library: 'JsWheels',
     libraryTarget: 'umd'
   },
-  // optimization: {
-  //   splitChunks: {},
-  //   minimizer: [
-  //     new UglifyJsPlugin({
-  //       uglifyOptions: {
-  //         cache: true,
-  //         parallel: true,
-  //         warnings: false,
-  //         comments: false,
-  //         compress: {
-  //           warnings: false,
-  //           drop_console: true
-  //         }
-  //       }
-  //     })
-  //   ]
-  // },
+  optimization: {
+    splitChunks: {},
+    minimizer: [
+      new UglifyJsPlugin({
+        uglifyOptions: {
+          cache: true,
+          parallel: true,
+          warnings: false,
+          comments: false,
+          compress: {
+            warnings: false,
+            drop_console: true
+          }
+        }
+      })
+    ]
+  },
   plugins: [
      new CleanWebpackPlugin(['dist'])
    ]
