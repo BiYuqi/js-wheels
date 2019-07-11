@@ -7,11 +7,11 @@ module.exports = merge(base, {
   mode: "development",
   output: {
     filename: 'js-wheels.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, '../dist')
   },
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, '../dist'),
     compress: true,
     port: 9000
   },

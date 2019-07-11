@@ -8,7 +8,7 @@ module.exports = merge(base, {
   mode: "production",
   output: {
     filename: 'js-wheels.min.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     library: 'JsWheels',
     libraryTarget: 'umd'
   },
@@ -30,6 +30,9 @@ module.exports = merge(base, {
     ]
   },
   plugins: [
-     new CleanWebpackPlugin(['dist'])
+     new CleanWebpackPlugin(['dist'], {
+      root: path.resolve(__dirname, '../'),
+      verbose: true
+     })
    ]
 })

@@ -7,7 +7,7 @@ const prod = process.env.NODE_ENV === 'production'
 
 module.exports = {
   entry: {
-    main: prod ? resolve('./src/index.js') : resolve('./src/index.dev.js')
+    main: prod ? resolve('../src/index.js') : resolve('../src/index.dev.js')
   },
   module: {
     rules: [
